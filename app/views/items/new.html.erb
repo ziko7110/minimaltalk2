@@ -1,6 +1,13 @@
 <h1>新規投稿ページ</h1>
 
 <%= form_with model: @item do |f| %>
-  <%= f.text_field :text %>
+<div class="title">タイトル</div>
+  <%= f.text_field :title %>
+  <div class="title">ニックネーム</div>
+  <%= f.text_field :nicname %>
+  <div class="title">本文</div>
+  <%= f.text_area :text %>
+  <div class="title">画像</div>
+  <%= f.file_field :image %>  
   <%= f.submit %> 
 <% end %>

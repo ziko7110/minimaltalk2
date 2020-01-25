@@ -1,5 +1,6 @@
-<h2>本文</h2>
+
 <%= link_to '新規投稿', '/items/new',class: "item_new" %>
+<div class="title">タイトル</div>
 <% @items.each do |item| %>
   <%= item.title %>
   <%= item.image %>

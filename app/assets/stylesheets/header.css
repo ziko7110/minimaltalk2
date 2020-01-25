@@ -1,0 +1,27 @@
+header {
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  margin: 0;
+  padding:0;
+  border: none;
+  background-image: url("haikei.jpg");
+}
+
+.headerlogo{
+  color: white;
+  font-size:50px;
+  margin: 0px;
+  font-family:  arial;
+}
+span{
+  font-size:30px;
+}
+
+.nav_call {
+  float: right;
+}
+.nav_call_a{
+  color:white;
+  text-decoration:none;
+}

@@ -1,0 +1,16 @@
+  <div class="titele">
+    <%= @item.title %>
+  </div>
+  <div class="image">
+    <%= @item.image %>
+  </div>
+  <div class="nickname">
+    <%= @item.nickname %>
+  </div>
+    <div class="text">
+    <%= @item.text %>
+  </div>
+  <div class="postManage">
+  <%= link_to "編集",  edit_item_path(@item.id), class: "postManage__edit" %>
+  <%= link_to "削除", item_path(@item.id), method: :delete, class: "postManage__delete" %>
+  </div>

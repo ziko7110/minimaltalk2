@@ -1,10 +1,13 @@
-
 <%= link_to '新規投稿', '/items/new',class: "item_new" %>
 <div class="title">タイトル</div>
 <% @items.each do |item| %>
-  <%= item.title %>
-  <%= item.image %>
-  <%= item.nickname %>
-  <%= item.likes %>
-  <%= item.bads %>
+  <div class="titele">
+     <%= link_to item.title, item_path(item.id), class: "content__right__top--title" %>
+  </div>
+  <div class="image">
+    <%= item.image %>
+  </div>
+  <div class="nickname">
+    <%= item.nickname %>
+  </div>
 <% end %>

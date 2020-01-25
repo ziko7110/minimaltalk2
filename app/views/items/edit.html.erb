@@ -1,0 +1,9 @@
+<div class="content__title">
+  投稿の編集
+</div>
+<%= form_with model: @item, class: :form, local: true do |f| %>
+  <%= f.text_field :title, placeholder: :タイトル, class: :form__title %>
+  <%= f.text_field :nickname, placeholder: :ニックネーム, class: :form__title %>
+  <%= f.text_area :text, placeholder: :コメント, class: :form__text %>
+  <%= f.submit '編集する', class: :form__btn %>
+<% end %>

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_01_24_132547) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.integer "item_id"
     t.string "comment_nickname", null: false
     t.text "comment", null: false
     t.integer "likes"

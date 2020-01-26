@@ -2,7 +2,7 @@
     <%= @item.title %>
   </div>
   <div class="image">
-    <%= @item.image %>
+    <%= image_tag @item.image.url ,size: "188x188", class: "photo" %>
   </div>
   <div class="nickname">
     <%= @item.nickname %>
@@ -14,3 +14,19 @@
   <%= link_to "編集",  edit_item_path(@item.id), class: "postManage__edit" %>
   <%= link_to "削除", item_path(@item.id), method: :delete, class: "postManage__delete" %>
   </div>
+       <%= form_with(model: [@item, @comment], local: true) do |f| %>
+        <%= f.text_field :comment_nickname,placeholder: "ニックネーム" %>
+        <%= f.text_area :comment, placeholder: "コメントする" %>
+        <%= f.submit "コメントする" %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <%= comment.comment_nickname %>
+            <%= comment.comment %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>

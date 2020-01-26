@@ -1,9 +1,18 @@
-<div class="content__title">
-  投稿の編集
+<div class="main">
+  <div class="main-contents">
+    <div class="content__title">
+      投稿の編集
+    </div>
+    <%= form_with model: @item, class: :form, local: true do |f| %>
+    <div class="title_edit">タイトル
+      <%= f.text_field :title, placeholder: :タイトル, class: :form__title %></div>
+    <div class="nickname_edit">ニックネーム
+      <%= f.text_field :nickname, placeholder: :ニックネーム, class: :form__title %></div>
+    <div class="text_edit">コメント</div>
+      <%= f.text_area :text,size:"60x8", placeholder: :コメント, class: :form__text %>
+      <div class="btn_edit">
+      <%= f.submit '編集する', class: :form__btn %></div>
+    <% end %>
+    <div class="under-speace"></div>
+  </div>
 </div>
-<%= form_with model: @item, class: :form, local: true do |f| %>
-  <%= f.text_field :title, placeholder: :タイトル, class: :form__title %>
-  <%= f.text_field :nickname, placeholder: :ニックネーム, class: :form__title %>
-  <%= f.text_area :text, placeholder: :コメント, class: :form__text %>
-  <%= f.submit '編集する', class: :form__btn %>
-<% end %>

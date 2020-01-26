@@ -125,3 +125,26 @@
 .comment_btn{
   margin-bottom: 50px;
 }
+
+
+/* item_edit */
+
+
+.title_edit{
+  margin-top: 30px;
+}
+
+.nickname_edit{
+  margin-top: 30px;
+}
+
+.text_edit{
+  margin-top: 30px;
+}
+.btn_edit{
+  margin-top: 10px;
+}
+
+.under-speace{
+  height: 330px;
+}

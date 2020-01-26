@@ -68,7 +68,9 @@
 
 /* アイテムショー */
 
-
+.titele{
+  font-size:24px;
+}
 
 .comment_content{
   padding-top: 10px;
@@ -84,4 +86,42 @@
 }
 .coment_text{
   font-size: 18px;
+}
+
+
+
+.postManage__edit{
+  display: inline-block;
+  padding: 0.3em 0.7em;
+  text-decoration: none;
+  background: green;
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.postManage__delete{
+
+  display: inline-block;
+  padding: 0.3em 0.7em;
+  text-decoration: none;
+  background: green;
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+
+.comment_name_new{
+  margin-top: 50px;
+}
+
+.comment_text_new{
+  margin-top: 25px;
+}
+.comment_btn{
+  margin-bottom: 50px;
 }

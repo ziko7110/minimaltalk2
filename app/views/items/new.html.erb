@@ -1,11 +1,17 @@
-<%= form_with model: @item,local: true,url: items_path, method: :POST do |f| %>
-  <div class="title">タイトル</div>
-    <%= f.text_field :title %>
-  <div class="title">ニックネーム</div>
-    <%= f.text_field :nickname %>
-  <div class="title">本文</div>
-    <%= f.text_area :text %>
-  <div class="title">画像</div>
-    <%= f.file_field :image %>  
-  <%= f.submit "送信" %> 
-<% end %>
+<div class="main">
+  <div class="main-contents">
+   <div class="new-item">
+    <%= form_with model: @item,local: true,url: items_path, method: :POST do |f| %>
+      <div class="new-item__name">アイテム名</div>
+        <%= f.text_field :title,  placeholder: :アイテム名 %>
+      <div class="new-item__nickname">ニックネーム</div>
+        <%= f.text_field :nickname, placeholder: :ニックネーム %>
+      <div class="new-item__text">本文</div>
+        <%= f.text_area :text, placeholder: :本文 %>
+      <div class="new-item__image">画像</div>
+        <%= f.file_field :image %>  
+      <%= f.submit "送信", class:"new-item__submit" %> 
+    <% end %>
+    </div>
+  </div>
+</div>

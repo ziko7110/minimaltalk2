@@ -1,32 +1,40 @@
-  <div class="titele">
-    <%= @item.title %>
-  </div>
-  <div class="image">
-    <%= image_tag @item.image.url ,size: "188x188", class: "photo" %>
-  </div>
-  <div class="nickname">
-    <%= @item.nickname %>
-  </div>
-    <div class="text">
-    <%= @item.text %>
-  </div>
-  <div class="postManage">
-  <%= link_to "編集",  edit_item_path(@item.id), class: "postManage__edit" %>
-  <%= link_to "削除", item_path(@item.id), method: :delete, class: "postManage__delete" %>
-  </div>
-       <%= form_with(model: [@item, @comment], local: true) do |f| %>
-        <%= f.text_field :comment_nickname,placeholder: "ニックネーム" %>
-        <%= f.text_area :comment, placeholder: "コメントする" %>
-        <%= f.submit "コメントする" %>
-    <div class="comments">
-      <h4>＜コメント一覧＞</h4>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <%= comment.comment_nickname %>
-            <%= comment.comment %>
-          </p>
-        <% end %>
+  <div class="main">
+    <div class="main-contents">
+      <div class="titele">
+        <%= @item.title %>
+      </div>
+      <div class="image">
+        <%= image_tag @item.image.url ,size: "188x188", class: "photo" %>
+      </div>
+      <div class="nickname">
+        <%= @item.nickname %>
+      </div>
+        <div class="text">
+        <%= @item.text %>
+      </div>
+      <div class="postManage">
+        <%= link_to "編集",  edit_item_path(@item.id), class: "postManage__edit" %>
+        <%= link_to "削除", item_path(@item.id), method: :delete, class: "postManage__delete" %>
+      </div>
+          <%= form_with(model: [@item, @comment], local: true) do |f| %>
+            <div class="coment_name_new">ニックネーム</div>
+            <%= f.text_field :comment_nickname,placeholder: "ニックネーム" %>
+            <div class="coment_text_new">コメント</div>
+            <%= f.text_area :comment, size: "60x8", placeholder: "コメントする" %>
+            <%= f.submit "コメントする" %>
+          <% end %>
+          <% if @comments %>
+          <div class="comments">
+            <% @comments.each do |comment| %>
+            <h4>＜コメント内容＞</h4>
+              <div class=comment_content p>
+                <div class="coment_name">ニックネーム</div>
+                <li><%= comment.comment_nickname %></li>
+                <div class="coment_text">コメント</div>
+                <li> <%= comment.comment %></li>
+              </div>
+          <% end %>
+          </div>
       <% end %>
-    </div>
-  <% end %>
+  </div>
+</div>

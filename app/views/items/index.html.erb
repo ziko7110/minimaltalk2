@@ -1,12 +1,22 @@
-<%= link_to 'アイテム追加', '/items/new',class: "item_new" %>
-<% @items.each do |item| %>
-  <div class="titele">
-     <%= link_to item.title, item_path(item.id), class: "content__right__top--title" %>
+<div class="main">
+  <div class="main-contents">
+  <%= link_to 'アイテム追加', '/items/new',class: "item_new" %>
+  <% @items.each do |item| %>
+  <div class="items">
+    <div class="image">
+      <div class="images__left">
+          <%= image_tag item.image.url ,size: "188x188", class: "photo" %>
+      </div>
+      </div>
+      <div class="images__right">
+        <div class="titele">アイテム名: 
+          <%= link_to item.title, item_path(item.id), class: "item-title" %>
+        </div>
+        <div class="nickname">ニックネーム: 
+          <%= item.nickname %>
+        </div>
+      </div>
+      </div>
+  <% end %>
   </div>
-  <div class="image">
-    <%= image_tag item.image.url ,size: "188x188", class: "photo" %>
-  </div>
-  <div class="nickname">
-    <%= item.nickname %>
-  </div>
-<% end %>
+</div>

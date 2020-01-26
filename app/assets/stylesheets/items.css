@@ -1,4 +1,87 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
 }
 
+.main{
+  background-color: whitesmoke;
+  height: 100%;
+}
+.main-contents{
+  background-color: greenyellow;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.item-title{
+  font-size: 18px;
+  text-decoration: none;
+}
+.items{
+  background-color: greenyellow;
+  height: 200px;
+}
+.images__left{
+  float: left;
+}
+
+.images__right{
+  float: left;
+  margin-left: 30px;
+}
+.nickname{
+  margin-top: 5px;
+}
+.item_new{
+  text-decoration: none;
+  font-size:18px;
+}
+
+
+/* アイテム追加 */
+
+.new-item{
+  background-color: greenyellow;
+  height: 680px;
+}
+
+
+.new-item__name{
+  padding-top: 20px;
+}
+
+.new-item__nickname{
+  padding-top: 20px;
+}
+
+.new-item__text{
+  padding-top: 20px;
+}
+
+.new-item__image{
+  padding-top: 20px;
+}
+
+.new-item__submit{
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* アイテムショー */
+
+
+
+.comment_content{
+  padding-top: 10px;
+  background-color: Lime;
+}
+
+.comments{
+  background-color: LawnGreen;
+  margin-top: 5px 0px 5px 0px;
+}
+.coment_name{
+  font-size: 18px;
+}
+.coment_text{
+  font-size: 18px;
+}

@@ -8,7 +8,7 @@
   height: 100%;
 }
 .main-contents{
-  background-color: greenyellow;
+  background-color: white;
   max-width: 760px;
   margin: 0 auto;
 }
@@ -17,7 +17,7 @@
   text-decoration: none;
 }
 .items{
-  background-color: greenyellow;
+  background-color: white;
   height: 200px;
 }
 .images__left{
@@ -40,7 +40,7 @@
 /* アイテム追加 */
 
 .new-item{
-  background-color: greenyellow;
+  background-color: white;
   height: 680px;
 }
 
@@ -74,11 +74,11 @@
 
 .comment_content{
   padding-top: 10px;
-  background-color: Lime;
+  background-color: white;
 }
 
 .comments{
-  background-color: LawnGreen;
+  background-color: white;
   margin-top: 5px 0px 5px 0px;
 }
 .coment_name{

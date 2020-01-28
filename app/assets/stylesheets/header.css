@@ -1,19 +1,21 @@
 header {
   height: 80px;
   width: 100%;
-  background-color: black;
+  background-color: white;
   margin: 0;
   padding:0;
   border: none;
   background-image: url("haikei.jpg");
+  border-bottom:solid 0.5px whitesmoke;
 }
 
 .headerlogo{
-  color: white;
+  color: black;
   font-size:50px;
   margin: 0px;
   font-family:  arial;
   text-decoration:none;
+  margin-left: 180px;
 }
 span{
   font-size:30px;
@@ -23,6 +25,7 @@ span{
   float: right;
 }
 .nav_call_a{
-  color:white;
+  color:black;
   text-decoration:none;
+  margin-right: 345px;
 }

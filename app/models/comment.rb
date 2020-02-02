@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-  validates :comment,  presence: true
+  validates :comment,:comment_nickname,  presence: true
   belongs_to :item
 end

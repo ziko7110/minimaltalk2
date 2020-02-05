@@ -36,8 +36,9 @@
             <% @comments.each do |comment| %>
             <h4>＜コメント内容＞</h4>
               <div class=comment_content p>
-                <div class="coment_name">ニックネーム</div>
-                <li><%= comment.comment_nickname %>さん</li>
+                <div class="coment_name"></div>
+            <%= link_to "削除",  comment_path(comment.id), method: :delete, class: "comment__delete" %>
+                <%= comment.comment_nickname %>さん
                 <div class="coment_text"></div>
                 <%= comment.comment %>
               </div>

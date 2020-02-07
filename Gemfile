@@ -64,4 +64,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'carrierwave'
-gem "aws-sdk-s3", require: false
+gem 'fog'
+# gem "aws-sdk-s3", require: false

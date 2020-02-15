@@ -1,5 +1,5 @@
 header {
-  height: 80px;
+  height: 90px;
   width: 100%;
   background-color: white;
   margin: 0;
@@ -8,6 +8,11 @@ header {
   background-image: url("haikei.jpg");
   border-bottom:solid 0.5px whitesmoke;
 }
+.header_contents{
+  max-width: 780px;
+  margin:0 auto;
+  height: 80px;
+}
 
 .headerlogo{
   color: black;
@@ -15,18 +20,28 @@ header {
   margin: 0px;
   font-family:  arial;
   text-decoration:none;
-  margin-left: 180px;
 }
 span{
   font-size:30px;
 }
-
-.nav_call {
-  float: right;
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
+/* .nav_call {
+  float: right;
+} */
+
 .nav_call_a{
   color:black;
   text-decoration:none;
-  margin-right: 345px;
+}
 
+.search{
+  width: 300px;
+  height: 80px;
+}
+.search_btn{
+margin-right: 0px;
 }

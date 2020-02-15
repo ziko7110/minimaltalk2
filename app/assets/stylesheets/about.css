@@ -1,0 +1,18 @@
+.about_contents{
+  max-width: 760px;
+  margin:0 auto;
+  height: 650px;
+}
+.about_title{
+  border-bottom:solid 0.5px whitesmoke;
+  font-size:30px;
+  margin-bottom: 10px;
+}
+.about_text{
+  margin-bottom: 20px;
+}
+.about_item_new{
+  text-decoration: none;
+  margin-left: 8px;
+  font-size:16px
+}

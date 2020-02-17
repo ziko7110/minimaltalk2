@@ -11,8 +11,13 @@
       </div>
       <a href="/item/about", class="nav_call_a">初めての方へ</a>
       <a href=# class="nav_call_a">問い合わせ</a>
-      <a href=# class="nav_call_a">新規登録</a>
-      <a href=# class="nav_call_a">ログイン</a>
+      <% if user_signed_in? %>  
+        <a href="#" class="nav_call_a">マイページ</a>
+        <a href="/users/sign_out" class="nav_call_a">ログアウト</a>
+      <% else %>
+        <a href="/users/sign_up" class="nav_call_a">新規登録</a>
+        <a href=" /users/sign_in" class="nav_call_a">ログイン</a>
+      <%end%>
     </div>
   </div>
 </header>

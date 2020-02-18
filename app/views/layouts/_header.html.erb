@@ -5,10 +5,12 @@
       <span>2</span>
     </div>
     <div class = "nav">
+      <%= form_with(url:  search_items_path, local: true, method: :get, class: "search-form") do |form| %>
       <div class = search_form>  
-        <input type = "search"class="search"name="search" placeholder="キーワードを入力"> 
-        <input type="submit"class="search_btn" name="submit" value="検索">
-      </div>
+        <%= form.text_field :keyword, placeholder: "キーワードを入力", class: "search" %>
+        <%= form.submit "検索", class: "search-btn"%> 
+       </div>
+      <%end%>
       <a href="/item/about", class="nav_call_a">初めての方へ</a>
       <a href=# class="nav_call_a">問い合わせ</a>
       <% if user_signed_in? %>  

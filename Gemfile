@@ -66,4 +66,5 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'fog'
 gem 'devise' 
+gem "gretel"
 # gem "aws-sdk-s3", require: false

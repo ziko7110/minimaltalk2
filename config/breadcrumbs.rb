@@ -1,11 +1,22 @@
 crumb :root do
   link "トップページ", root_path
 end
-
 crumb :about do
-  link "初めての方へ", mypage_users_path
+  link "初めての方へ", item_about_path
+  parent :root
 end
 
+crumb :new_account do
+  link "新規登録", new_user_registration_path
+  parent :root
+end
+
+
+
+crumb :account_login do
+  link "ログインページ", user_session_path
+  parent :root
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end

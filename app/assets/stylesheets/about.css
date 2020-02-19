@@ -1,18 +1,26 @@
 .about_contents{
   max-width: 760px;
   margin:0 auto;
-  height: 650px;
+  height: 700px;
 }
 .about_title{
   border-bottom:solid 0.5px whitesmoke;
   font-size:30px;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 .about_text{
   margin-bottom: 20px;
+
 }
 .about_item_new{
   text-decoration: none;
   margin-left: 8px;
   font-size:16px
+}
+.about_breadcrumbs{
+font-size: 16px;
+}
+.current{
+  font-size: 16px;
 }

@@ -1,4 +1,8 @@
 <div class="user_new_contents">
+<% breadcrumb :account_login %>
+<div class = "new_account"><%= breadcrumbs pretext: "",separator: " &rsaquo; "%></div>
+
+
 <h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

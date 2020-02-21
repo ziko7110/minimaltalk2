@@ -21,4 +21,43 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* 
+
+## itemテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|image|string||
+|text|string||
+|nickname|string||
+|likes|integer||
+|bads|integer||
+### Association
+- has_many :comments
+
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|encrypted_password|strig|null: false|
+|reset_password_token|string||
+|first_name_kana|string||
+|reset_password_sent_at|datatime||
+|remember_created_at|datatime||
+
+
+
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|item_id|integer||
+|comment_nickname|string|null: false|
+|comment|text|null: false|
+|likes|integer||
+|bads|integer||
+### Association
+- belongs_to :item
+
+

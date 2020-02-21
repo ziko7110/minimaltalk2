@@ -1,50 +1,46 @@
-  <div class="main">
-    <div class="main-contents">
-      <div class="titele">
+<div class="main">
+  <div class="main-contents">
+    <div class="titele">
         <%= @item.title %>
-      </div>
-      <div class="image">
-        <%= image_tag @item.image.url ,size: "188x188", class: "photo" %>
-      </div>
-      <div class="nickname">投稿者：
-        <%= @item.nickname %>さん
-      </div>
-        <div class="text">コメント：
-        <%= @item.text %>
-      </div>
+    </div>
+    <div class="image">
+      <%= image_tag @item.image.url ,size: "188x188", class: "photo" %>
+    </div>
+    <div class="nickname">投稿者：
+      <%= @item.nickname %>さん
+    </div>
+    <div class="text">コメント：
+      <%= @item.text %>
+    </div>
+    <% if user_signed_in? %>  
       <div class="postManage">
         <%= link_to "編集",  edit_item_path(@item.id), class: "postManage__edit" %>
         <%= link_to "削除", item_path(@item.id), method: :delete, class: "postManage__delete" %>
       </div>
-
-
-
-
-          <%= form_with(model: [@item, @comment], local: true) do |f| %>
-            <div class="comment_name_new">ニックネーム</div>
-            <%= f.text_field :comment_nickname,placeholder: "ニックネーム" %>
-            <div class="comment_text_new">コメント</div>
-            <%= f.text_area :comment, size: "60x8", placeholder: "コメントする" %>
-            <%= f.submit "コメントする", class: "comment_btn" %>
-          <% end %>
-
-
-
-
-        <% if @comments %>
-          <div class="comments">
-            <% @comments.each do |comment| %>
-            <h4>＜コメント内容＞</h4>
-              <div class=comment_content p>
-                <div class="coment_name"></div>
+    <%end%>
+    <%= form_with(model: [@item, @comment], local: true) do |f| %>
+      <div class="comment_name_new">ニックネーム</div>
+      <%= f.text_field :comment_nickname,placeholder: "ニックネーム" %>
+      <div class="comment_text_new">コメント</div>
+      <%= f.text_area :comment, size: "60x8", placeholder: "コメントする" %>
+      <%= f.submit "コメントする", class: "comment_btn" %>
+    <% end %>
+    <% if @comments %>
+      <div class="comments">
+        <% @comments.each do |comment| %>
+        <h4>＜コメント内容＞</h4>
+        <div class=comment_content >
+          <div class="coment_name"></div>
+          <% if user_signed_in? %>  
             <%= link_to "削除",  comment_path(comment.id), method: :delete, class: "comment__delete" %>
-                <%= comment.comment_nickname %>さん
-                <div class="coment_text"></div>
-                <%= comment.comment %>
-              </div>
-          <% end %>
-          </div>
+          <%end%>
+          <%= comment.comment_nickname %>さん
+          <div class="coment_text"></div>
+          <%= comment.comment %>
+        </div>
+        <% end %>
+      </div>
       <% end %>
-      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </div>

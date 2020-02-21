@@ -1,4 +1,11 @@
 # README
+##minimaltalk2
+https://minimaltalk2.herokuapp.com/
+
+##サイト概要
+近年注目されている少ないもので生活を行う「ミニマリスト」が交流を行えるWebサイト 特定の「モノ」に対して各々の考え方を書き込むことで新しい価値観を見出しより豊かなミニマルライフを模索できます。
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

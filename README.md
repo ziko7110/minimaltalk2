@@ -6,30 +6,9 @@ https://minimaltalk2.herokuapp.com/
 近年注目されている少ないもので生活を行う「ミニマリスト」が交流を行えるWebサイト 特定の「モノ」に対して各々の考え方を書き込むことで新しい価値観を見出しより豊かなミニマルライフを模索できます。
 
 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
   ruby 2.5.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* 
 
 ## itemテーブル
 |Column|Type|Options|

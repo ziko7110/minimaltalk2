@@ -4,7 +4,6 @@ class ItemsController < ApplicationController
   end
 
   def about
-
   end
 
   def new

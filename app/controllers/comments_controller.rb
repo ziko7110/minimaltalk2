@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-# binding.pry
-    # Comment.find_by(params[:id])
+
     comment = Comment.find(params[:id],params[:item_id])
     comment.destroy
     redirect_to root_path
